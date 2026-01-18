@@ -12,7 +12,7 @@ let isDeleting = false;
 
 const typingSpeed = 100;
 const deletingSpeed = 60;
-const holdTime = 2000; // 2 seconds
+const holdTime = 2000;
 
 function typeEffect() {
   const currentRole = roles[roleIndex];
