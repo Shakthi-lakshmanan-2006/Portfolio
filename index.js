@@ -1,7 +1,7 @@
 const roles = [
-  "Computer Science Student.",
-  "Cloud Enthusiast.",
-  "Creative Problem Solver."
+  "Developer.",
+  "Problem Solver.",
+  "Tech Enthusiast."
 ];
 
 const typingText = document.getElementById("typing-text");
