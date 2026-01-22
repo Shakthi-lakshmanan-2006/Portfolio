@@ -1,3 +1,4 @@
+// EXISTING TYPING EFFECT (KEEP AS IS)
 const roles = [
   "Developer.",
   "Problem Solver.",
@@ -38,3 +39,15 @@ function typeEffect() {
 }
 
 typeEffect();
+
+// SCROLL REVEAL ANIMATION
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 120) {
+      el.classList.add("active");
+    }
+  });
+});

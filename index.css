@@ -163,3 +163,105 @@ body {
   border-radius: 14px;
   box-shadow: 0 0 50px rgba(0, 255, 255, 0.25);
 }
+
+/* ABOUT SECTION */
+.about-section {
+  width: 100%;
+  background-color: #000000;
+  padding: 180px 80px;
+}
+
+/* LAYOUT */
+.about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+/* IMAGE LEFT */
+.about-image img {
+  width: 360px;
+  border-radius: 16px;
+  box-shadow: 0 0 45px rgba(0, 255, 255, 0.25);
+  transition: transform 0.4s ease;
+}
+
+/* TEXT RIGHT */
+.about-text-content {
+  max-width: 700px;
+}
+
+.about-title {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #cbd5e1;
+  margin-bottom: 18px;
+}
+
+.about-quote {
+  font-size: 19px;
+  font-weight: 600;
+  color: #00ffff;
+  margin: 22px 0;
+}
+
+.about-resume-note {
+  font-size: 17px;
+  color: #cbd5e1;
+  margin-bottom: 22px;
+}
+
+/* RESUME BUTTON */
+.resume-btn {
+  padding: 14px 44px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  background-color: #00ffff;
+  color: #000000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+}
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* WAVE HOVER EFFECT */
+.about-section:hover {
+  background: radial-gradient(circle at top, rgba(0,255,255,0.05), transparent);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 280px;
+  }
+}

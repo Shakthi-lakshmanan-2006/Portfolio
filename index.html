@@ -8,77 +8,106 @@
   <!-- Google Font: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 
   <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header-inner">
-      <div class="logo">Portfolio</div>
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">Portfolio</div>
 
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#journey">Journey</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO (UNCHANGED) -->
+<section class="hero" id="home">
+  <div class="hero-left">
+    <p class="intro">Welcome to my space! 👋</p>
+
+    <h1 class="name">Shakthi Lakshmanan V</h1>
+
+    <h2 class="role">
+      <span class="static-text">I’m a </span>
+      <span id="typing-text"></span>
+      <span class="cursor">|</span>
+    </h2>
+
+    <p class="description">
+      “Curiosity pulled me into technology. Persistence kept me there. Mistakes taught lessons no tutorial ever could. Through every challenge, the focus stayed the same—grow, build, and refine.”
+    </p>
+
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/shakthi-lakshmanan-v-787b032b8/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/Shakthi-lakshmanan-2006" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:sakthilakshman521@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
-  </header>
+  </div>
 
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-left">
-      <p class="intro">Welcome to my space! 👋</p>
+  <div class="hero-right">
+    <img src="assets/image.png" alt="Full Stack and Cloud Technology" />
+  </div>
+</section>
 
-      <h1 class="name">Shakthi Lakshmanan V</h1>
+<!-- ABOUT SECTION (NEW — SCROLL DOWN ONLY) -->
+<section id="about" class="about-section reveal">
 
-      <h2 class="role">
-        <span class="static-text">I’m a </span>
-        <span id="typing-text"></span>
-        <span class="cursor">|</span>
-      </h2>
+  <div class="about-container">
 
-      <p class="description">
-        “Curiosity pulled me into technology. Persistence kept me there.
-        Mistakes taught lessons no tutorial ever could.
-        Through every challenge, the focus stayed the same—grow, build, and refine.”
+    <!-- IMAGE LEFT -->
+    <div class="about-image">
+      <img src="assets/about-photo.png" alt="My Photo">
+    </div>
+
+    <!-- TEXT RIGHT -->
+    <div class="about-text-content">
+
+      <h2 class="about-title">About Me</h2>
+
+      <p class="about-text">
+        I am a sophomore in Computer Science Engineering at St. Joseph’s Institute of Technology, passionate about software development, system design, cloud technologies, and problem-solving.
       </p>
 
-      <!-- SOCIAL ICONS -->
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/shakthi-lakshmanan-v-787b032b8/" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
+      <p class="about-text">
+        I build scalable, user-friendly web applications and enjoy turning complex ideas into clean, efficient, and real-world solutions. My work focuses on Java, Web Technologies, Databases, and Cloud Platforms, and I constantly improve through hands-on projects and coding practice.
+      </p>
 
-        <a href="https://github.com/Shakthi-lakshmanan-2006?tab=overview&from=2025-12-01&to=2025-12-31" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
+      <p class="about-text">
+        Driven by curiosity, discipline, and continuous learning, my goal is to build meaningful digital products and solve real-world problems through technology.
+      </p>
 
-        <a href="mailto:sakthilakshman521@gmail.com" aria-label="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div>
+      <p class="about-quote">
+        "I don’t just write code — I build solutions that create impact."
+      </p>
+
+      <p class="about-resume-note">
+        Curious to know more about me?<br>
+        Here’s my resume — a deeper look into my journey and skills.
+      </p>
+
+      <a href="assets/resume.pdf" target="_blank" class="resume-btn">
+        View Resume
+      </a>
+
     </div>
 
-    <div class="hero-right">
-      <img src="assets/image.png" alt="Full Stack and Cloud Technology" />
-    </div>
-  </section>
+  </div>
 
-  <script src="index.js"></script>
+</section>
+
+<script src="index.js"></script>
 </body>
 </html>
