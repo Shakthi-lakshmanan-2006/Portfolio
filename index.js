@@ -1,8 +1,8 @@
-// EXISTING TYPING EFFECT (KEEP AS IS)
+/* TYPING EFFECT */
 const roles = [
+  "Tech Enthusiast.",
   "Developer.",
-  "Problem Solver.",
-  "Tech Enthusiast."
+  "Problem Solver."
 ];
 
 const typingText = document.getElementById("typing-text");
@@ -40,14 +40,17 @@ function typeEffect() {
 
 typeEffect();
 
-// SCROLL REVEAL ANIMATION
-const reveals = document.querySelectorAll(".reveal");
+/* SCROLL REVEAL */
+const revealElements = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", () => {
-  reveals.forEach(el => {
+function revealOnScroll() {
+  revealElements.forEach(el => {
     const top = el.getBoundingClientRect().top;
     if (top < window.innerHeight - 120) {
       el.classList.add("active");
     }
   });
-});
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
