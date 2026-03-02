@@ -218,7 +218,7 @@ section {
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 34px;
+  gap: 35px;
 }
 
 .cert-card {
