@@ -226,7 +226,7 @@ section {
   border: 1.6px solid rgba(0,255,255,.35);
   border-radius: 18px;
   padding: 28px;
-  transition: .35s ease;
+  transition: .40s ease;
 }
 
 .cert-card:hover {
