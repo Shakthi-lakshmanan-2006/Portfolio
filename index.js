@@ -12,7 +12,7 @@ let charIndex = 0;
 let isDeleting = false;
 
 const typingSpeed = 100;
-const deletingSpeed = 60;
+const deletingSpeed = 50;
 const holdTime = 1500;
 
 function typeEffect() {
