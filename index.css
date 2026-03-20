@@ -9,7 +9,7 @@ body {
   background: black;
   color: white;
   opacity: 0;
-  animation: pageLoad 0.9s ease forwards;
+  animation: pageLoad 1.0s ease forwards;
 }
 
 @keyframes pageLoad {
