@@ -60,7 +60,7 @@ body {
   height: 4px;
   background: #00ffff;
   transform: scaleX(0);
-  transition: .35s ease;
+  transition: .40s ease;
 }
 
 .nav a:hover::after {
