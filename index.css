@@ -80,7 +80,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 110px 80px 50px; /* REDUCED */
+  padding: 100px 80px 50px; /* REDUCED */
   gap: 50px;
 }
 
