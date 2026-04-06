@@ -126,7 +126,7 @@ section {
 .social-icons a:hover {
   background: #00ffff;
   color: black;
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 .hero-right img {
