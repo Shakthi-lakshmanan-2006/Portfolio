@@ -3,23 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Shakthi Lakshmanan V</title>
+  <title>Shakthi Lakshmanan V | Portfolio</title>
+  
+  <meta name="description" content="Portfolio of Shakthi Lakshmanan V, a Computer Science Engineering student specializing in scalable web applications, Java, and Cloud Technologies." />
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet"/>
 
+  <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
+<!-- Custom Cursor -->
+<div id="cursor"></div>
+<div id="cursor-blur"></div>
+
+<!-- Interactive Background -->
+<canvas id="bg-canvas"></canvas>
+
 <!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <div class="logo">Portfolio</div>
-
+    <div class="logo">Shakthi<span class="dot">.</span></div>
     <nav class="nav">
-      <a href="#home">Home</a>
+      <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#certifications">Certifications</a>
       <a href="#projects">Projects</a>
@@ -30,161 +42,321 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
   <div class="hero-left">
     <p class="intro">Welcome to my space! 👋</p>
 
     <h1 class="name">Shakthi Lakshmanan V</h1>
 
-    <h2 class="role">
+        <h2 class="role">
       <span class="static-text">I’m a </span>
-      <span id="typing-text"></span>
+          <span id="typing-text"></span>
       <span class="cursor">|</span>
-    </h2>
+        </h2>
 
-    <p class="description">
+        <p class="description">
       “Curiosity pulled me into technology. Persistence kept me there. Mistakes taught lessons no tutorial ever could. Through every challenge, the focus stayed the same — grow, build, and refine.”
-    </p>
+        </p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/shakthi-lakshmanan-v-787b032b8/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Shakthi-lakshmanan-2006" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:sakthilakshman521@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-right reveal-right">
+        <div class="image-wrapper">
+          <div class="glow-ring"></div>
+          <img src="assets/image.png" alt="Tech Abstract" class="hero-img" onerror="this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800'"/>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="social-icons">
+  <!-- ABOUT -->
+  <section id="about" class="about-section pt-100">
+    <div class="section-header reveal-bottom">
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      <div class="section-line"></div>
+    </div>
+    
+    <div class="about-container">
+      <div class="about-image-wrapper reveal-left">
+        <img src="assets/Shakthi.jpeg" alt="Shakthi Lakshmanan" class="about-img" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600'">
+        <div class="experience-badge">
+          <span class="number">2+</span>
+          <span class="text">Years<br>Coding</span>
+        </div>
+      </div>
+
+      <div class="about-text-content reveal-right">
+        <h3 class="about-subtitle">Computer Science Engineering Student @ St. Joseph's</h3>
+        <p class="about-text">
+          My journey in technology started as a beginner driven by curiosity. Today, I specialize in building <strong>scalable, user-friendly web applications</strong> and enjoy turning complex ideas into clean, efficient, and real-world solutions.
+        </p>
+        <p class="about-text">
+          I am deeply interested in <strong>Java, Modern Web Technologies, Database Systems, and Cloud Infrastructure (AWS)</strong>. I aim to write code that not only works but creates a lasting impact.
+        </p>
+        
+        <blockquote class="about-quote">
+          "I don't just write code — I build solutions that create impact in the real world."
+        </blockquote>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h4>10+</h4>
+            <p>Projects Built</p>
+          </div>
+          <div class="stat-item">
+            <h4>4+</h4>
+            <p>Certifications</p>
+          </div>
+          <div class="stat-item">
+            <h4>500+</h4>
+            <p>Commits</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills-section pt-100">
+    <div class="section-header reveal-bottom">
+      <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="skills-container reveal-bottom">
+      <div class="skill-category">
+        <h3 class="skill-category-title"><i class="fas fa-code"></i> Languages & Core</h3>
+        <div class="skills-grid">
+          <div class="skill-item"><i class="fab fa-java"></i> Java</div>
+          <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+          <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+          <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-category-title"><i class="fas fa-laptop-code"></i> Frontend & Web</h3>
+        <div class="skills-grid">
+          <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
+          <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+          <div class="skill-item"><i class="fab fa-react"></i> React.js</div>
+          <div class="skill-item"><i class="fas fa-wind"></i> Tailwind</div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3 class="skill-category-title"><i class="fas fa-cloud"></i> Tools & Cloud</h3>
+        <div class="skills-grid">
+          <div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
+          <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
+          <div class="skill-item"><i class="fab fa-github"></i> GitHub</div>
+          <div class="skill-item"><i class="fas fa-server"></i> DBMS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS (NEW SECTION) -->
+  <section id="projects" class="projects-section pt-100">
+    <div class="section-header reveal-bottom">
+      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-card reveal-bottom">
+        <div class="project-image">
+          <div class="project-overlay">
+            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+          </div>
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600" alt="Project 1">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Cloud Infrastructure Manager</h3>
+          <p class="project-desc">A full-stack application for managing and provisioning AWS resources seamlessly through a web interface.</p>
+          <div class="project-tags">
+            <span>Java</span>
+            <span>React</span>
+            <span>AWS</span>
+            <span>MySQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card reveal-bottom" style="transition-delay: 0.2s;">
+        <div class="project-image">
+          <div class="project-overlay">
+            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+          </div>
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600" alt="Project 2">
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Data Analytics Dashboard</h3>
+          <p class="project-desc">An interactive dashboard visualizing complex datasets utilizing Python algorithms and rich UI components.</p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>JavaScript</span>
+            <span>Chart.js</span>
+            <span>API</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="cert-section pt-100">
+    <div class="section-header reveal-bottom">
+      <h2 class="section-title">My <span class="gradient-text">Certifications</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="cert-grid">
+      <!-- Cert 1 -->
+      <div class="cert-card reveal-bottom">
+        <div class="cert-glow"></div>
+        <div class="cert-header">
+          <span class="cert-badge badge-international">INTERNATIONAL</span>
+          <i class="fab fa-aws cert-icon"></i>
+        </div>
+        <h3 class="cert-name">AWS CLF-C02 Practitioner</h3>
+        <p class="cert-meta">Amazon Web Services • 2024</p>
+        <p class="cert-desc">Validating AWS cloud fundamentals, billing, architecture, and security best practices.</p>
+        <div class="cert-tags">
+          <span>AWS</span><span>Cloud</span><span>Architecture</span>
+        </div>
+      </div>
+
+      <!-- Cert 2 -->
+      <div class="cert-card reveal-bottom" style="transition-delay: 0.1s;">
+        <div class="cert-glow"></div>
+        <div class="cert-header">
+          <span class="cert-badge badge-network">NETWORK</span>
+          <i class="fas fa-network-wired cert-icon"></i>
+        </div>
+        <h3 class="cert-name">Network Fundamentals</h3>
+        <p class="cert-meta">Cisco Networking Academy • 2024</p>
+        <p class="cert-desc">Networking basics, routing, IP addressing, and core security infrastructure.</p>
+        <div class="cert-tags">
+          <span>Networking</span><span>Routing</span><span>Security</span>
+        </div>
+      </div>
+
+      <!-- Cert 3 -->
+      <div class="cert-card reveal-bottom" style="transition-delay: 0.2s;">
+        <div class="cert-glow"></div>
+        <div class="cert-header">
+          <span class="cert-badge badge-silver">SILVER</span>
+          <i class="fab fa-python cert-icon"></i>
+        </div>
+        <h3 class="cert-name">Python for Data Science</h3>
+        <p class="cert-meta">NPTEL / IIT • 2023</p>
+        <p class="cert-desc">Data analysis, data visualization, and applied machine learning models.</p>
+        <div class="cert-tags">
+          <span>Python</span><span>Data Science</span><span>Analytics</span>
+        </div>
+      </div>
+
+      <!-- Cert 4 -->
+      <div class="cert-card elite reveal-bottom" style="transition-delay: 0.3s;">
+        <div class="cert-glow"></div>
+        <div class="cert-header">
+          <span class="cert-badge badge-elite">ELITE</span>
+          <i class="fab fa-java cert-icon"></i>
+        </div>
+        <h3 class="cert-name">Programming in Java</h3>
+        <p class="cert-meta">NPTEL / IIT • 2023</p>
+        <p class="cert-desc">Advanced software practices, OOP concepts, algorithms and data structures.</p>
+        <div class="cert-tags">
+          <span>Java</span><span>OOP</span><span>Programming</span>
+        </div>
+      </div>
+
+      <!-- Cert 5 -->
+      <div class="cert-card elite reveal-bottom" style="transition-delay: 0.4s;">
+        <div class="cert-glow"></div>
+        <div class="cert-header">
+          <span class="cert-badge badge-elite">ELITE</span>
+          <i class="fas fa-database cert-icon"></i>
+        </div>
+        <h3 class="cert-name">Database Systems (DBMS)</h3>
+        <p class="cert-meta">NPTEL / IIT • 2023</p>
+        <p class="cert-desc">SQL optimization, indexing, database normalization, and robust data modeling.</p>
+        <div class="cert-tags">
+          <span>DBMS</span><span>SQL</span><span>Data Models</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT (NEW SECTION) -->
+  <section id="contact" class="contact-section pt-100">
+    <div class="section-header reveal-bottom">
+      <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="contact-container reveal-bottom">
+      <div class="contact-info">
+        <h3>Let's talk about your next project!</h3>
+        <p>Whether you have a question, a project in mind, or just want to say hi, I'll try my best to get back to you!</p>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+            <div class="info">
+              <h4>Email</h4>
+              <a href="mailto:sakthilakshman521@gmail.com">sakthilakshman521@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info">
+              <h4>Location</h4>
+              <p>Chennai, India</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Message feature coming soon! Please use the email directly.');">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">Shakthi<span>.</span></div>
+    <div class="footer-socials">
       <a href="https://www.linkedin.com/in/shakthi-lakshmanan-v-787b032b8/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       <a href="https://github.com/Shakthi-lakshmanan-2006" target="_blank"><i class="fab fa-github"></i></a>
       <a href="mailto:sakthilakshman521@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
+    <p class="copyright">© 2024 Shakthi Lakshmanan V. All rights reserved.</p>
   </div>
+</footer>
 
-  <div class="hero-right">
-    <img src="assets/image.png" alt="Tech Image" />
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="about-section reveal">
-  <div class="about-container">
-
-    <div class="about-image">
-      <img src="assets/Shakthi.jpeg" alt="My Photo">
-    </div>
-
-    <div class="about-text-content">
-      <h2 class="about-title">About Me</h2>
-
-      <p class="about-text">
-        <strong>Hello!</strong> I am a sophomore in <strong>Computer Science Engineering at St. Joseph’s Institute of Technology</strong>, 
-        and my journey in technology started as a <strong>beginner , driven by curiosity</strong>.
-      </p>
-
-      <p class="about-text">
-        I build <strong>scalable, user-friendly web applications</strong> and enjoy turning complex ideas into 
-        <strong>clean, efficient, and real-world solutions</strong>. My work focuses on developing applications using
-        <strong>Java, Web Technologies, Databases (SQL), and AWS Cloud Platforms</strong>.
-    
-      </p>
-
-      <p class="about-text">
-        Driven by curiosity, discipline, and continuous learning patterns, my goal is to build meaningful digital services and solve real-world problems through digital technology.
-      </p>
-
-      <p class="about-quote">
-        "I don’t just write code —I build solutions that create impact to real world applications."
-      </p>
-
-      <p class="about-resume-note">
-        <strong>Curious to know more about me?</strong><br>
-        Here’s my resume — a deeper look into my journey and skills.
-        Make sure u see this.!
-      </p>
-      <a href="/resume.pdf" target="_blank" class="resume-btn">Resume</a>
-    </div>
-
-  </div>
-</section>
-
-<section id="certifications" class="cert-section reveal">
-  <div class="cert-container">
-    <h2 class="cert-title">
-      <i class="fas fa-graduation-cap"></i> Certifications
-    </h2>
-    <div class="cert-grid">
-      <div class="cert-card">
-        <span class="cert-badge badge-international">INTERNATIONAL</span>
-        <h3>AWS CLF-C02 Cloud Practitioner</h3>
-        <p><strong>Platform:</strong> Amazon Web Services</p>
-        <p><strong>Year:</strong> 2024</p>
-        <p class="cert-desc">
-          International certification validating Amazon Web Services cloud fundamentals, billing, best practices.
-        </p>
-        <div class="cert-tags">
-          <span>AWS</span>
-          <span>Cloud</span>
-          <span>Architecture</span>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <span class="cert-badge badge-network">NETWORK</span>
-        <h3>Network Fundamentals Certification</h3>
-        <p><strong>Platform:</strong> Cisco Networking Academy</p>
-        <p><strong>Year:</strong> 2024</p>
-        <p class="cert-desc">
-          Covers networking basics, routing, IP addressing, and security infrastructure fundamentals.
-        </p>
-        <div class="cert-tags">
-          <span>Networking</span>
-          <span>Routing</span>
-          <span>Security</span>
-        </div>
-      </div>
-
-      <div class="cert-card">
-        <span class="cert-badge badge-silver">SILVER</span>
-        <h3>Python for Data Science</h3>
-        <p><strong>Platform:</strong> NPTEL / IIT</p>
-        <p><strong>Year:</strong> 2023</p>
-        <p class="cert-desc">
-          Python certification focused on data analysis,visualization and  machine learning applications.
-        </p>
-        <div class="cert-tags">
-          <span>Python</span>
-          <span>Data Science</span>
-          <span>Analytics</span>
-        </div>
-      </div>
-
-      <div class="cert-card elite">
-        <span class="cert-badge badge-elite">ELITE</span>
-        <h3>NPTEL Programming in Java</h3>
-        <p><strong>Platform:</strong> NPTEL / IIT</p>
-        <p><strong>Year:</strong> 2023</p>
-        <p class="cert-desc">
-          Elite certification covering Java fundamentals, oops concepts, and advanced software practices.
-        </p>
-        <div class="cert-tags">
-          <span>Java</span>
-          <span>OOP</span>
-          <span>Programming</span>
-        </div>
-      </div>
-
-      <!-- DBMS -->
-      <div class="cert-card elite">
-        <span class="cert-badge badge-elite">ELITE</span>
-        <h3>Database Management Systems</h3>
-        <p><strong>Platform:</strong> NPTEL / IIT</p>
-        <p><strong>Year:</strong> 2023</p>
-        <p class="cert-desc">
-          Elite-level certification covering SQL optimization, indexing , normalization, and data modeling.
-        </p>
-        <div class="cert-tags">
-          <span>DBMS</span>
-          <span>SQL</span>
-          <span>Data Models</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <script src="index.js"></script>
 </body>
 </html>
